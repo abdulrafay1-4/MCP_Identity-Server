@@ -1,0 +1,41 @@
+{
+  "name": "mcp-identity-server",
+  "version": "0.1.0",
+  "description": "OAuth 2.1 authorization server for AI agents: short-lived, narrowly scoped tokens that can be delegated and revoked",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abdulrafay1-4/MCP_Identity-Server.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "tsx src/server.ts",
+    "rotate-key": "tsx src/cli/rotateKey.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.3",
+    "hono": "^4.13.13",
+    "jose": "^5.9.6",
+    "pg": "^8.23.0",
+    "zod": "^3.24.1"
+  },
+  "peerDependencies": {
+    "@modelcontextprotocol/server": "^2.0.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.5",
+    "@modelcontextprotocol/server": "^2.0.0",
+    "@types/node": "^22.10.5",
+    "@types/pg": "^8.21.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3"
+  }
+}
